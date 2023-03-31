@@ -14,13 +14,14 @@ const removeClassShow = () => {
 }
 
 const checkInputs = () => {
+	const people = Number(peopleInput.value)
 	if (priceInput.value == '' || peopleInput.value == '' || tipSelect.value == -1) {
 		removeClassShow()
 		errorInfo.textContent = 'Uzupełnij wszystkie pola!'
 	} else if (priceInput.value <= 0 || peopleInput.value <= 0) {
 		removeClassShow()
 		errorInfo.textContent = 'Wartości muszą być dodatnie!'
-	} else if (Number.isInteger(!peopleInput)) {
+	} else if (Number.isInteger(people) == false) {
 		removeClassShow()
 		errorInfo.textContent = 'Liczba osób musi być całkowita!'
 	} else {
@@ -45,3 +46,5 @@ const countBill = () => {
 }
 
 btn.addEventListener('click', checkInputs)
+
+test = 3.5
