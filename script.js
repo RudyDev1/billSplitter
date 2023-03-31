@@ -35,7 +35,12 @@ const countBill = () => {
 	const people = Number(peopleInput.value)
 	const tipAmount = Number(tipSelect.value)
 
-	const tipToPay = price * tipAmount
+	let tipToPay = price * tipAmount
+
+	if(tipAmount == 5 || tipSelect.value == 10){
+		tipToPay = tipAmount
+	}
+
 	const amountToPay = (price + tipToPay) / people
 
 	costInfo.classList.add('show')
