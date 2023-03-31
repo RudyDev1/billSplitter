@@ -20,7 +20,7 @@ const checkInputs = () => {
 	} else if (priceInput.value <= 0 || peopleInput.value <= 0) {
 		removeClassShow()
 		errorInfo.textContent = 'Wartości muszą być dodatnie!'
-	} else if (!Number.isInteger(peopleInput)) {
+	} else if (Number.isInteger(!peopleInput)) {
 		removeClassShow()
 		errorInfo.textContent = 'Liczba osób musi być całkowita!'
 	} else {
